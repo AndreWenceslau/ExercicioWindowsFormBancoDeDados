@@ -1,0 +1,8 @@
+﻿
+CREATE TABLE peixes(id INT PRIMARY KEY IDENTITY(1,1),
+nome VARCHAR(100),
+raca VARCHAR(100),
+preco DECIMAL(8),
+quantidade DECIMAL(4)
+);
+SELECT*FROM peixes;

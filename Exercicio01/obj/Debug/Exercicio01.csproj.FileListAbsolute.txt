@@ -1,0 +1,11 @@
+C:\Users\Alunos\source\repos\ExercicioWindowsFormBancoDeDados\Exercicio01\bin\Debug\Exercicio01.exe.config
+C:\Users\Alunos\source\repos\ExercicioWindowsFormBancoDeDados\Exercicio01\bin\Debug\Exercicio01.exe
+C:\Users\Alunos\source\repos\ExercicioWindowsFormBancoDeDados\Exercicio01\bin\Debug\Exercicio01.pdb
+C:\Users\Alunos\source\repos\ExercicioWindowsFormBancoDeDados\Exercicio01\obj\Debug\Exercicio01.csprojAssemblyReference.cache
+C:\Users\Alunos\source\repos\ExercicioWindowsFormBancoDeDados\Exercicio01\obj\Debug\Exercicio01.principalForm.resources
+C:\Users\Alunos\source\repos\ExercicioWindowsFormBancoDeDados\Exercicio01\obj\Debug\Exercicio01.PeixesForm.resources
+C:\Users\Alunos\source\repos\ExercicioWindowsFormBancoDeDados\Exercicio01\obj\Debug\Exercicio01.Properties.Resources.resources
+C:\Users\Alunos\source\repos\ExercicioWindowsFormBancoDeDados\Exercicio01\obj\Debug\Exercicio01.csproj.GenerateResource.cache
+C:\Users\Alunos\source\repos\ExercicioWindowsFormBancoDeDados\Exercicio01\obj\Debug\Exercicio01.csproj.CoreCompileInputs.cache
+C:\Users\Alunos\source\repos\ExercicioWindowsFormBancoDeDados\Exercicio01\obj\Debug\Exercicio01.exe
+C:\Users\Alunos\source\repos\ExercicioWindowsFormBancoDeDados\Exercicio01\obj\Debug\Exercicio01.pdb
