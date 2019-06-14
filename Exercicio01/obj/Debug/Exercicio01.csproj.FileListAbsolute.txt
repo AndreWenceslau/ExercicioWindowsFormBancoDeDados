@@ -9,3 +9,14 @@ C:\Users\Alunos\source\repos\ExercicioWindowsFormBancoDeDados\Exercicio01\obj\De
 C:\Users\Alunos\source\repos\ExercicioWindowsFormBancoDeDados\Exercicio01\obj\Debug\Exercicio01.csproj.CoreCompileInputs.cache
 C:\Users\Alunos\source\repos\ExercicioWindowsFormBancoDeDados\Exercicio01\obj\Debug\Exercicio01.exe
 C:\Users\Alunos\source\repos\ExercicioWindowsFormBancoDeDados\Exercicio01\obj\Debug\Exercicio01.pdb
+T:\Documentos\GitHub\ExercicioWindowsFormBancoDeDados\Exercicio01\bin\Debug\Exercicio01.exe.config
+T:\Documentos\GitHub\ExercicioWindowsFormBancoDeDados\Exercicio01\bin\Debug\Exercicio01.exe
+T:\Documentos\GitHub\ExercicioWindowsFormBancoDeDados\Exercicio01\bin\Debug\Exercicio01.pdb
+T:\Documentos\GitHub\ExercicioWindowsFormBancoDeDados\Exercicio01\obj\Debug\Exercicio01.csprojAssemblyReference.cache
+T:\Documentos\GitHub\ExercicioWindowsFormBancoDeDados\Exercicio01\obj\Debug\Exercicio01.principalForm.resources
+T:\Documentos\GitHub\ExercicioWindowsFormBancoDeDados\Exercicio01\obj\Debug\Exercicio01.PeixesForm.resources
+T:\Documentos\GitHub\ExercicioWindowsFormBancoDeDados\Exercicio01\obj\Debug\Exercicio01.Properties.Resources.resources
+T:\Documentos\GitHub\ExercicioWindowsFormBancoDeDados\Exercicio01\obj\Debug\Exercicio01.csproj.GenerateResource.cache
+T:\Documentos\GitHub\ExercicioWindowsFormBancoDeDados\Exercicio01\obj\Debug\Exercicio01.csproj.CoreCompileInputs.cache
+T:\Documentos\GitHub\ExercicioWindowsFormBancoDeDados\Exercicio01\obj\Debug\Exercicio01.exe
+T:\Documentos\GitHub\ExercicioWindowsFormBancoDeDados\Exercicio01\obj\Debug\Exercicio01.pdb

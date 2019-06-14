@@ -64,8 +64,6 @@ namespace Exercicio01
             conexao.Close();
             AtualizarTabela();
 
-
-
         }
         private void LimparCampos()
         {
@@ -88,7 +86,7 @@ namespace Exercicio01
             DataTable tabela = new DataTable();
             tabela.Load(comando.ExecuteReader());
             dgvPeixes.RowCount = 0;
-            for (int i = 0; i < tabela.Rows.Count; i++) 
+            for (int i = 0; i < tabela.Rows.Count; i++)
             {
                 DataRow linha = tabela.Rows[i];
                 PeixeClasse peixe = new PeixeClasse();
@@ -97,15 +95,15 @@ namespace Exercicio01
                 peixe.Raca = linha["raca"].ToString();
                 peixe.Preco = Convert.ToDecimal(linha["preco"]);
                 peixe.Preco = Convert.ToInt32(linha["quantidade"]);
-                dgvPeixes.Rows.Add(new string[] {peixe.Id.ToString(),peixe.Nome,peixe.Raca,peixe.Preco.ToDecimal(), 
-}
-
+                dgvPeixes.Rows.Add(new string[] { peixe.Id.ToString(), peixe.Nome, peixe.Raca, peixe.Preco.ToString(), peixe.Quantidade.ToString()});
             }
-        }
-
-        private void lblPreco_Click(object sender, EventArgs e)
-        {
 
         }
+    
+
+    private void lblPreco_Click(object sender, EventArgs e)
+    {
+
     }
+}
 }
