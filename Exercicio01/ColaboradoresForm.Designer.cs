@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.lblCodigo = new System.Windows.Forms.Label();
-            this.lblID = new System.Windows.Forms.Label();
+            this.lblId = new System.Windows.Forms.Label();
             this.lblNome = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.lblCPF = new System.Windows.Forms.Label();
@@ -37,150 +37,163 @@
             this.mtbCPF = new System.Windows.Forms.MaskedTextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.lblSexo = new System.Windows.Forms.Label();
-            this.rbdMasculino = new System.Windows.Forms.RadioButton();
-            this.rbdFeminino = new System.Windows.Forms.RadioButton();
             this.lblCargo = new System.Windows.Forms.Label();
             this.cbCargo = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblProgramador = new System.Windows.Forms.Label();
             this.rbtProgramadorTrue = new System.Windows.Forms.RadioButton();
             this.rbtProgramadorFalse = new System.Windows.Forms.RadioButton();
+            this.cbSexo = new System.Windows.Forms.ComboBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.ColumnCodigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnNome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnCPF = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnSalario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnSexo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnCargo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnProgramador = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnExcluir = new System.Windows.Forms.Button();
+            this.btnSalvar = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblCodigo
             // 
             this.lblCodigo.AutoSize = true;
-            this.lblCodigo.Location = new System.Drawing.Point(12, 9);
+            this.lblCodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCodigo.Location = new System.Drawing.Point(13, 92);
+            this.lblCodigo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCodigo.Name = "lblCodigo";
-            this.lblCodigo.Size = new System.Drawing.Size(40, 13);
+            this.lblCodigo.Size = new System.Drawing.Size(92, 29);
             this.lblCodigo.TabIndex = 0;
             this.lblCodigo.Text = "Código";
             this.lblCodigo.Click += new System.EventHandler(this.label1_Click);
             // 
-            // lblID
+            // lblId
             // 
-            this.lblID.AutoSize = true;
-            this.lblID.Location = new System.Drawing.Point(51, 9);
-            this.lblID.Name = "lblID";
-            this.lblID.Size = new System.Drawing.Size(13, 13);
-            this.lblID.TabIndex = 1;
-            this.lblID.Text = "0";
+            this.lblId.AutoSize = true;
+            this.lblId.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblId.Location = new System.Drawing.Point(113, 92);
+            this.lblId.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblId.Name = "lblId";
+            this.lblId.Size = new System.Drawing.Size(26, 29);
+            this.lblId.TabIndex = 1;
+            this.lblId.Text = "0";
             // 
             // lblNome
             // 
             this.lblNome.AutoSize = true;
-            this.lblNome.Location = new System.Drawing.Point(12, 32);
+            this.lblNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNome.Location = new System.Drawing.Point(13, 133);
+            this.lblNome.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNome.Name = "lblNome";
-            this.lblNome.Size = new System.Drawing.Size(35, 13);
+            this.lblNome.Size = new System.Drawing.Size(79, 29);
             this.lblNome.TabIndex = 2;
             this.lblNome.Text = "Nome";
             this.lblNome.Click += new System.EventHandler(this.label1_Click_1);
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(54, 32);
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(100, 133);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.Size = new System.Drawing.Size(179, 34);
             this.textBox1.TabIndex = 3;
             // 
             // lblCPF
             // 
             this.lblCPF.AutoSize = true;
-            this.lblCPF.Location = new System.Drawing.Point(12, 65);
+            this.lblCPF.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCPF.Location = new System.Drawing.Point(13, 175);
+            this.lblCPF.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCPF.Name = "lblCPF";
-            this.lblCPF.Size = new System.Drawing.Size(27, 13);
+            this.lblCPF.Size = new System.Drawing.Size(61, 29);
             this.lblCPF.TabIndex = 4;
             this.lblCPF.Text = "CPF";
             // 
             // lblSalario
             // 
             this.lblSalario.AutoSize = true;
-            this.lblSalario.Location = new System.Drawing.Point(12, 94);
+            this.lblSalario.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSalario.Location = new System.Drawing.Point(13, 220);
+            this.lblSalario.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSalario.Name = "lblSalario";
-            this.lblSalario.Size = new System.Drawing.Size(39, 13);
+            this.lblSalario.Size = new System.Drawing.Size(89, 29);
             this.lblSalario.TabIndex = 6;
             this.lblSalario.Text = "Salário";
             this.lblSalario.Click += new System.EventHandler(this.label1_Click_2);
             // 
             // mtbCPF
             // 
-            this.mtbCPF.Location = new System.Drawing.Point(54, 58);
+            this.mtbCPF.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mtbCPF.Location = new System.Drawing.Point(100, 175);
+            this.mtbCPF.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.mtbCPF.Mask = "999.999.999-99";
             this.mtbCPF.Name = "mtbCPF";
-            this.mtbCPF.Size = new System.Drawing.Size(100, 20);
+            this.mtbCPF.Size = new System.Drawing.Size(179, 34);
             this.mtbCPF.TabIndex = 7;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(54, 91);
+            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.Location = new System.Drawing.Point(100, 217);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
+            this.textBox2.Size = new System.Drawing.Size(179, 34);
             this.textBox2.TabIndex = 8;
             // 
             // lblSexo
             // 
             this.lblSexo.AutoSize = true;
-            this.lblSexo.Location = new System.Drawing.Point(12, 123);
+            this.lblSexo.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSexo.Location = new System.Drawing.Point(13, 266);
+            this.lblSexo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSexo.Name = "lblSexo";
-            this.lblSexo.Size = new System.Drawing.Size(31, 13);
+            this.lblSexo.Size = new System.Drawing.Size(68, 29);
             this.lblSexo.TabIndex = 9;
             this.lblSexo.Text = "Sexo";
-            // 
-            // rbdMasculino
-            // 
-            this.rbdMasculino.AutoSize = true;
-            this.rbdMasculino.Location = new System.Drawing.Point(54, 123);
-            this.rbdMasculino.Name = "rbdMasculino";
-            this.rbdMasculino.Size = new System.Drawing.Size(73, 17);
-            this.rbdMasculino.TabIndex = 10;
-            this.rbdMasculino.TabStop = true;
-            this.rbdMasculino.Text = "Masculino";
-            this.rbdMasculino.UseVisualStyleBackColor = true;
-            // 
-            // rbdFeminino
-            // 
-            this.rbdFeminino.AutoSize = true;
-            this.rbdFeminino.Location = new System.Drawing.Point(133, 123);
-            this.rbdFeminino.Name = "rbdFeminino";
-            this.rbdFeminino.Size = new System.Drawing.Size(67, 17);
-            this.rbdFeminino.TabIndex = 11;
-            this.rbdFeminino.TabStop = true;
-            this.rbdFeminino.Text = "Feminino";
-            this.rbdFeminino.UseVisualStyleBackColor = true;
-            this.rbdFeminino.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
             // lblCargo
             // 
             this.lblCargo.AutoSize = true;
-            this.lblCargo.Location = new System.Drawing.Point(12, 151);
+            this.lblCargo.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCargo.Location = new System.Drawing.Point(13, 310);
+            this.lblCargo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCargo.Name = "lblCargo";
-            this.lblCargo.Size = new System.Drawing.Size(35, 13);
+            this.lblCargo.Size = new System.Drawing.Size(79, 29);
             this.lblCargo.TabIndex = 12;
             this.lblCargo.Text = "Cargo";
             this.lblCargo.Click += new System.EventHandler(this.label1_Click_3);
             // 
             // cbCargo
             // 
+            this.cbCargo.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbCargo.FormattingEnabled = true;
-            this.cbCargo.Location = new System.Drawing.Point(54, 148);
+            this.cbCargo.Location = new System.Drawing.Point(100, 302);
+            this.cbCargo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cbCargo.Name = "cbCargo";
-            this.cbCargo.Size = new System.Drawing.Size(121, 21);
+            this.cbCargo.Size = new System.Drawing.Size(179, 37);
             this.cbCargo.TabIndex = 13;
             // 
-            // label1
+            // lblProgramador
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 182);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 14;
-            this.label1.Text = "label1";
+            this.lblProgramador.AutoSize = true;
+            this.lblProgramador.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProgramador.Location = new System.Drawing.Point(13, 364);
+            this.lblProgramador.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblProgramador.Name = "lblProgramador";
+            this.lblProgramador.Size = new System.Drawing.Size(155, 29);
+            this.lblProgramador.TabIndex = 14;
+            this.lblProgramador.Text = "Programador";
             // 
             // rbtProgramadorTrue
             // 
             this.rbtProgramadorTrue.AutoSize = true;
-            this.rbtProgramadorTrue.Location = new System.Drawing.Point(54, 182);
+            this.rbtProgramadorTrue.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbtProgramadorTrue.Location = new System.Drawing.Point(176, 364);
+            this.rbtProgramadorTrue.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rbtProgramadorTrue.Name = "rbtProgramadorTrue";
-            this.rbtProgramadorTrue.Size = new System.Drawing.Size(42, 17);
+            this.rbtProgramadorTrue.Size = new System.Drawing.Size(76, 33);
             this.rbtProgramadorTrue.TabIndex = 15;
             this.rbtProgramadorTrue.TabStop = true;
             this.rbtProgramadorTrue.Text = "Sim";
@@ -189,26 +202,120 @@
             // rbtProgramadorFalse
             // 
             this.rbtProgramadorFalse.AutoSize = true;
-            this.rbtProgramadorFalse.Location = new System.Drawing.Point(130, 182);
+            this.rbtProgramadorFalse.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbtProgramadorFalse.Location = new System.Drawing.Point(256, 364);
+            this.rbtProgramadorFalse.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rbtProgramadorFalse.Name = "rbtProgramadorFalse";
-            this.rbtProgramadorFalse.Size = new System.Drawing.Size(45, 17);
+            this.rbtProgramadorFalse.Size = new System.Drawing.Size(79, 33);
             this.rbtProgramadorFalse.TabIndex = 16;
             this.rbtProgramadorFalse.TabStop = true;
             this.rbtProgramadorFalse.Text = "Não";
             this.rbtProgramadorFalse.UseVisualStyleBackColor = true;
             // 
+            // cbSexo
+            // 
+            this.cbSexo.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbSexo.FormattingEnabled = true;
+            this.cbSexo.Location = new System.Drawing.Point(100, 258);
+            this.cbSexo.Name = "cbSexo";
+            this.cbSexo.Size = new System.Drawing.Size(179, 37);
+            this.cbSexo.TabIndex = 17;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ColumnCodigo,
+            this.ColumnNome,
+            this.ColumnCPF,
+            this.ColumnSalario,
+            this.ColumnSexo,
+            this.ColumnCargo,
+            this.ColumnProgramador});
+            this.dataGridView1.Location = new System.Drawing.Point(363, 8);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(739, 534);
+            this.dataGridView1.TabIndex = 18;
+            // 
+            // ColumnCodigo
+            // 
+            this.ColumnCodigo.HeaderText = "Código";
+            this.ColumnCodigo.Name = "ColumnCodigo";
+            this.ColumnCodigo.ReadOnly = true;
+            // 
+            // ColumnNome
+            // 
+            this.ColumnNome.HeaderText = "Nome";
+            this.ColumnNome.Name = "ColumnNome";
+            this.ColumnNome.ReadOnly = true;
+            // 
+            // ColumnCPF
+            // 
+            this.ColumnCPF.HeaderText = "CPF";
+            this.ColumnCPF.Name = "ColumnCPF";
+            this.ColumnCPF.ReadOnly = true;
+            // 
+            // ColumnSalario
+            // 
+            this.ColumnSalario.HeaderText = "Salário";
+            this.ColumnSalario.Name = "ColumnSalario";
+            this.ColumnSalario.ReadOnly = true;
+            // 
+            // ColumnSexo
+            // 
+            this.ColumnSexo.HeaderText = "Sexo";
+            this.ColumnSexo.Name = "ColumnSexo";
+            this.ColumnSexo.ReadOnly = true;
+            // 
+            // ColumnCargo
+            // 
+            this.ColumnCargo.HeaderText = "Cargo";
+            this.ColumnCargo.Name = "ColumnCargo";
+            this.ColumnCargo.ReadOnly = true;
+            // 
+            // ColumnProgramador
+            // 
+            this.ColumnProgramador.HeaderText = "Programador";
+            this.ColumnProgramador.Name = "ColumnProgramador";
+            this.ColumnProgramador.ReadOnly = true;
+            // 
+            // btnExcluir
+            // 
+            this.btnExcluir.Location = new System.Drawing.Point(176, 415);
+            this.btnExcluir.Name = "btnExcluir";
+            this.btnExcluir.Size = new System.Drawing.Size(159, 72);
+            this.btnExcluir.TabIndex = 19;
+            this.btnExcluir.Text = "Excluir";
+            this.btnExcluir.UseVisualStyleBackColor = true;
+            // 
+            // btnSalvar
+            // 
+            this.btnSalvar.Location = new System.Drawing.Point(9, 415);
+            this.btnSalvar.Name = "btnSalvar";
+            this.btnSalvar.Size = new System.Drawing.Size(159, 72);
+            this.btnSalvar.TabIndex = 20;
+            this.btnSalvar.Text = "Salvar";
+            this.btnSalvar.UseVisualStyleBackColor = true;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
+            // 
             // ColaboradoresForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1116, 554);
+            this.Controls.Add(this.btnSalvar);
+            this.Controls.Add(this.btnExcluir);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.cbSexo);
             this.Controls.Add(this.rbtProgramadorFalse);
             this.Controls.Add(this.rbtProgramadorTrue);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblProgramador);
             this.Controls.Add(this.cbCargo);
             this.Controls.Add(this.lblCargo);
-            this.Controls.Add(this.rbdFeminino);
-            this.Controls.Add(this.rbdMasculino);
             this.Controls.Add(this.lblSexo);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.mtbCPF);
@@ -216,10 +323,12 @@
             this.Controls.Add(this.lblCPF);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.lblNome);
-            this.Controls.Add(this.lblID);
+            this.Controls.Add(this.lblId);
             this.Controls.Add(this.lblCodigo);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "ColaboradoresForm";
             this.Text = "ColaboradoresForm";
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -228,7 +337,7 @@
         #endregion
 
         private System.Windows.Forms.Label lblCodigo;
-        private System.Windows.Forms.Label lblID;
+        private System.Windows.Forms.Label lblId;
         private System.Windows.Forms.Label lblNome;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label lblCPF;
@@ -236,12 +345,21 @@
         private System.Windows.Forms.MaskedTextBox mtbCPF;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label lblSexo;
-        private System.Windows.Forms.RadioButton rbdMasculino;
-        private System.Windows.Forms.RadioButton rbdFeminino;
         private System.Windows.Forms.Label lblCargo;
         private System.Windows.Forms.ComboBox cbCargo;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblProgramador;
         private System.Windows.Forms.RadioButton rbtProgramadorTrue;
         private System.Windows.Forms.RadioButton rbtProgramadorFalse;
+        private System.Windows.Forms.ComboBox cbSexo;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnCodigo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnNome;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnCPF;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnSalario;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnSexo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnCargo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnProgramador;
+        private System.Windows.Forms.Button btnExcluir;
+        private System.Windows.Forms.Button btnSalvar;
     }
 }

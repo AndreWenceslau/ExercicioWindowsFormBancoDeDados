@@ -41,5 +41,17 @@ namespace Exercicio01
         {
 
         }
+
+        private void btnSalvar_Click(object sender, EventArgs e)
+        {
+            if(lblId.Text == "0")
+            {
+                //Inserir();
+            }
+            else
+            {
+                //Alterar();
+            }
+        }
     }
 }
