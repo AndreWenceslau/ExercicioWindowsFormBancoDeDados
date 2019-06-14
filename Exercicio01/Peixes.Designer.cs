@@ -38,15 +38,14 @@
             this.mtbPreco = new System.Windows.Forms.MaskedTextBox();
             this.lblQuantidade = new System.Windows.Forms.Label();
             this.txtQuantidade = new System.Windows.Forms.TextBox();
-            this.dgvPeixes = new System.Windows.Forms.DataGridView();
-            this.ColumnCodigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnNome = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnRaca = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnPreco = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnQuantidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnApagarPeixe = new System.Windows.Forms.Button();
             this.btnSalavarPeixe = new System.Windows.Forms.Button();
-            this.btnEditarPeixe = new System.Windows.Forms.Button();
+            this.ColumnQuantidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnPreco = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnRaca = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnNome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnCodigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvPeixes = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPeixes)).BeginInit();
             this.SuspendLayout();
             // 
@@ -105,7 +104,9 @@
             this.cbRaca.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbRaca.FormattingEnabled = true;
             this.cbRaca.Items.AddRange(new object[] {
-            "PEIXE PALHAÇO"});
+            "Peixe Palhaço",
+            "Cascudo",
+            "Peixe Boi"});
             this.cbRaca.Location = new System.Drawing.Point(18, 227);
             this.cbRaca.Name = "cbRaca";
             this.cbRaca.Size = new System.Drawing.Size(217, 39);
@@ -126,6 +127,7 @@
             // 
             this.mtbPreco.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mtbPreco.Location = new System.Drawing.Point(18, 303);
+            this.mtbPreco.Mask = "$9999.99";
             this.mtbPreco.Name = "mtbPreco";
             this.mtbPreco.Size = new System.Drawing.Size(217, 38);
             this.mtbPreco.TabIndex = 7;
@@ -148,6 +150,56 @@
             this.txtQuantidade.Size = new System.Drawing.Size(217, 38);
             this.txtQuantidade.TabIndex = 9;
             // 
+            // btnApagarPeixe
+            // 
+            this.btnApagarPeixe.Location = new System.Drawing.Point(681, 21);
+            this.btnApagarPeixe.Name = "btnApagarPeixe";
+            this.btnApagarPeixe.Size = new System.Drawing.Size(107, 46);
+            this.btnApagarPeixe.TabIndex = 11;
+            this.btnApagarPeixe.Text = "Apagar";
+            this.btnApagarPeixe.UseVisualStyleBackColor = true;
+            this.btnApagarPeixe.Click += new System.EventHandler(this.btnApagarPeixe_Click);
+            // 
+            // btnSalavarPeixe
+            // 
+            this.btnSalavarPeixe.Location = new System.Drawing.Point(568, 21);
+            this.btnSalavarPeixe.Name = "btnSalavarPeixe";
+            this.btnSalavarPeixe.Size = new System.Drawing.Size(107, 44);
+            this.btnSalavarPeixe.TabIndex = 12;
+            this.btnSalavarPeixe.Text = "Salvar";
+            this.btnSalavarPeixe.UseVisualStyleBackColor = true;
+            this.btnSalavarPeixe.Click += new System.EventHandler(this.btnSalavarPeixe_Click);
+            // 
+            // ColumnQuantidade
+            // 
+            this.ColumnQuantidade.HeaderText = "Quantidade";
+            this.ColumnQuantidade.Name = "ColumnQuantidade";
+            this.ColumnQuantidade.ReadOnly = true;
+            // 
+            // ColumnPreco
+            // 
+            this.ColumnPreco.HeaderText = "Preço";
+            this.ColumnPreco.Name = "ColumnPreco";
+            this.ColumnPreco.ReadOnly = true;
+            // 
+            // ColumnRaca
+            // 
+            this.ColumnRaca.HeaderText = "Raça";
+            this.ColumnRaca.Name = "ColumnRaca";
+            this.ColumnRaca.ReadOnly = true;
+            // 
+            // ColumnNome
+            // 
+            this.ColumnNome.HeaderText = "Nome";
+            this.ColumnNome.Name = "ColumnNome";
+            this.ColumnNome.ReadOnly = true;
+            // 
+            // ColumnCodigo
+            // 
+            this.ColumnCodigo.HeaderText = "Código";
+            this.ColumnCodigo.Name = "ColumnCodigo";
+            this.ColumnCodigo.ReadOnly = true;
+            // 
             // dgvPeixes
             // 
             this.dgvPeixes.AllowUserToAddRows = false;
@@ -164,71 +216,13 @@
             this.dgvPeixes.ReadOnly = true;
             this.dgvPeixes.Size = new System.Drawing.Size(535, 341);
             this.dgvPeixes.TabIndex = 10;
-            // 
-            // ColumnCodigo
-            // 
-            this.ColumnCodigo.HeaderText = "Código";
-            this.ColumnCodigo.Name = "ColumnCodigo";
-            this.ColumnCodigo.ReadOnly = true;
-            // 
-            // ColumnNome
-            // 
-            this.ColumnNome.HeaderText = "Nome";
-            this.ColumnNome.Name = "ColumnNome";
-            this.ColumnNome.ReadOnly = true;
-            // 
-            // ColumnRaca
-            // 
-            this.ColumnRaca.HeaderText = "Raça";
-            this.ColumnRaca.Name = "ColumnRaca";
-            this.ColumnRaca.ReadOnly = true;
-            // 
-            // ColumnPreco
-            // 
-            this.ColumnPreco.HeaderText = "Preço";
-            this.ColumnPreco.Name = "ColumnPreco";
-            this.ColumnPreco.ReadOnly = true;
-            // 
-            // ColumnQuantidade
-            // 
-            this.ColumnQuantidade.HeaderText = "Quantidade";
-            this.ColumnQuantidade.Name = "ColumnQuantidade";
-            this.ColumnQuantidade.ReadOnly = true;
-            // 
-            // btnApagarPeixe
-            // 
-            this.btnApagarPeixe.Location = new System.Drawing.Point(681, 21);
-            this.btnApagarPeixe.Name = "btnApagarPeixe";
-            this.btnApagarPeixe.Size = new System.Drawing.Size(107, 46);
-            this.btnApagarPeixe.TabIndex = 11;
-            this.btnApagarPeixe.Text = "Apagar";
-            this.btnApagarPeixe.UseVisualStyleBackColor = true;
-            // 
-            // btnSalavarPeixe
-            // 
-            this.btnSalavarPeixe.Location = new System.Drawing.Point(455, 19);
-            this.btnSalavarPeixe.Name = "btnSalavarPeixe";
-            this.btnSalavarPeixe.Size = new System.Drawing.Size(107, 46);
-            this.btnSalavarPeixe.TabIndex = 12;
-            this.btnSalavarPeixe.Text = "Salvar";
-            this.btnSalavarPeixe.UseVisualStyleBackColor = true;
-            this.btnSalavarPeixe.Click += new System.EventHandler(this.btnSalavarPeixe_Click);
-            // 
-            // btnEditarPeixe
-            // 
-            this.btnEditarPeixe.Location = new System.Drawing.Point(568, 19);
-            this.btnEditarPeixe.Name = "btnEditarPeixe";
-            this.btnEditarPeixe.Size = new System.Drawing.Size(107, 46);
-            this.btnEditarPeixe.TabIndex = 13;
-            this.btnEditarPeixe.Text = "Editar";
-            this.btnEditarPeixe.UseVisualStyleBackColor = true;
+            this.dgvPeixes.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPeixes_CellDoubleClick);
             // 
             // PeixesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 515);
-            this.Controls.Add(this.btnEditarPeixe);
             this.Controls.Add(this.btnSalavarPeixe);
             this.Controls.Add(this.btnApagarPeixe);
             this.Controls.Add(this.dgvPeixes);
@@ -244,6 +238,8 @@
             this.Controls.Add(this.lblCodigo);
             this.Name = "PeixesForm";
             this.Text = "Peixes";
+            this.Activated += new System.EventHandler(this.PeixesForm_Activated);
+            this.Load += new System.EventHandler(this.PeixesForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPeixes)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -262,14 +258,13 @@
         private System.Windows.Forms.MaskedTextBox mtbPreco;
         private System.Windows.Forms.Label lblQuantidade;
         private System.Windows.Forms.TextBox txtQuantidade;
-        private System.Windows.Forms.DataGridView dgvPeixes;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnCodigo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnNome;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnRaca;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnPreco;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnQuantidade;
         private System.Windows.Forms.Button btnApagarPeixe;
         private System.Windows.Forms.Button btnSalavarPeixe;
-        private System.Windows.Forms.Button btnEditarPeixe;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnQuantidade;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnPreco;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnRaca;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnNome;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnCodigo;
+        private System.Windows.Forms.DataGridView dgvPeixes;
     }
 }
