@@ -53,5 +53,23 @@ namespace Exercicio01
                 //Alterar();
             }
         }
+        private void Inserir()
+        {
+            ColaboradoresClasse colaboradores = new ColaboradoresClasse();
+            colaboradores.Nome = txtNome.Text;
+            colaboradores.Cpf = mtbCPF.Text;
+            colaboradores.Salario = Convert.ToDecimal(txtSalario.Text);
+            colaboradores.Sexo = cbCargo.SelectedItem.ToString();
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void mtbCPF_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
     }
 }

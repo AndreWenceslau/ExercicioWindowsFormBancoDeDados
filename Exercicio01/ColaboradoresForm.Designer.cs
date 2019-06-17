@@ -31,11 +31,11 @@
             this.lblCodigo = new System.Windows.Forms.Label();
             this.lblId = new System.Windows.Forms.Label();
             this.lblNome = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtNome = new System.Windows.Forms.TextBox();
             this.lblCPF = new System.Windows.Forms.Label();
             this.lblSalario = new System.Windows.Forms.Label();
             this.mtbCPF = new System.Windows.Forms.MaskedTextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtSalario = new System.Windows.Forms.TextBox();
             this.lblSexo = new System.Windows.Forms.Label();
             this.lblCargo = new System.Windows.Forms.Label();
             this.cbCargo = new System.Windows.Forms.ComboBox();
@@ -91,14 +91,15 @@
             this.lblNome.Text = "Nome";
             this.lblNome.Click += new System.EventHandler(this.label1_Click_1);
             // 
-            // textBox1
+            // txtNome
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(100, 133);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(179, 34);
-            this.textBox1.TabIndex = 3;
+            this.txtNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNome.Location = new System.Drawing.Point(100, 133);
+            this.txtNome.Margin = new System.Windows.Forms.Padding(4);
+            this.txtNome.Name = "txtNome";
+            this.txtNome.Size = new System.Drawing.Size(179, 34);
+            this.txtNome.TabIndex = 3;
+            this.txtNome.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // lblCPF
             // 
@@ -127,20 +128,21 @@
             // 
             this.mtbCPF.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mtbCPF.Location = new System.Drawing.Point(100, 175);
-            this.mtbCPF.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.mtbCPF.Margin = new System.Windows.Forms.Padding(4);
             this.mtbCPF.Mask = "999.999.999-99";
             this.mtbCPF.Name = "mtbCPF";
             this.mtbCPF.Size = new System.Drawing.Size(179, 34);
             this.mtbCPF.TabIndex = 7;
+            this.mtbCPF.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.mtbCPF_MaskInputRejected);
             // 
-            // textBox2
+            // txtSalario
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(100, 217);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(179, 34);
-            this.textBox2.TabIndex = 8;
+            this.txtSalario.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSalario.Location = new System.Drawing.Point(100, 217);
+            this.txtSalario.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSalario.Name = "txtSalario";
+            this.txtSalario.Size = new System.Drawing.Size(179, 34);
+            this.txtSalario.TabIndex = 8;
             // 
             // lblSexo
             // 
@@ -169,8 +171,11 @@
             // 
             this.cbCargo.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbCargo.FormattingEnabled = true;
+            this.cbCargo.Items.AddRange(new object[] {
+            "Padeiro",
+            "Motorista "});
             this.cbCargo.Location = new System.Drawing.Point(100, 302);
-            this.cbCargo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbCargo.Margin = new System.Windows.Forms.Padding(4);
             this.cbCargo.Name = "cbCargo";
             this.cbCargo.Size = new System.Drawing.Size(179, 37);
             this.cbCargo.TabIndex = 13;
@@ -191,7 +196,7 @@
             this.rbtProgramadorTrue.AutoSize = true;
             this.rbtProgramadorTrue.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbtProgramadorTrue.Location = new System.Drawing.Point(176, 364);
-            this.rbtProgramadorTrue.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbtProgramadorTrue.Margin = new System.Windows.Forms.Padding(4);
             this.rbtProgramadorTrue.Name = "rbtProgramadorTrue";
             this.rbtProgramadorTrue.Size = new System.Drawing.Size(76, 33);
             this.rbtProgramadorTrue.TabIndex = 15;
@@ -204,7 +209,7 @@
             this.rbtProgramadorFalse.AutoSize = true;
             this.rbtProgramadorFalse.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbtProgramadorFalse.Location = new System.Drawing.Point(256, 364);
-            this.rbtProgramadorFalse.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbtProgramadorFalse.Margin = new System.Windows.Forms.Padding(4);
             this.rbtProgramadorFalse.Name = "rbtProgramadorFalse";
             this.rbtProgramadorFalse.Size = new System.Drawing.Size(79, 33);
             this.rbtProgramadorFalse.TabIndex = 16;
@@ -216,6 +221,9 @@
             // 
             this.cbSexo.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbSexo.FormattingEnabled = true;
+            this.cbSexo.Items.AddRange(new object[] {
+            "Masculino",
+            "Feminino"});
             this.cbSexo.Location = new System.Drawing.Point(100, 258);
             this.cbSexo.Name = "cbSexo";
             this.cbSexo.Size = new System.Drawing.Size(179, 37);
@@ -317,15 +325,15 @@
             this.Controls.Add(this.cbCargo);
             this.Controls.Add(this.lblCargo);
             this.Controls.Add(this.lblSexo);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtSalario);
             this.Controls.Add(this.mtbCPF);
             this.Controls.Add(this.lblSalario);
             this.Controls.Add(this.lblCPF);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtNome);
             this.Controls.Add(this.lblNome);
             this.Controls.Add(this.lblId);
             this.Controls.Add(this.lblCodigo);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ColaboradoresForm";
             this.Text = "ColaboradoresForm";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -339,11 +347,11 @@
         private System.Windows.Forms.Label lblCodigo;
         private System.Windows.Forms.Label lblId;
         private System.Windows.Forms.Label lblNome;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.Label lblCPF;
         private System.Windows.Forms.Label lblSalario;
         private System.Windows.Forms.MaskedTextBox mtbCPF;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtSalario;
         private System.Windows.Forms.Label lblSexo;
         private System.Windows.Forms.Label lblCargo;
         private System.Windows.Forms.ComboBox cbCargo;
