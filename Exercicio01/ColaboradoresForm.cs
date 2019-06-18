@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -58,8 +59,37 @@ namespace Exercicio01
             ColaboradoresClasse colaboradores = new ColaboradoresClasse();
             colaboradores.Nome = txtNome.Text;
             colaboradores.Cpf = mtbCPF.Text;
-            colaboradores.Salario = Convert.ToDecimal(txtSalario.Text);
-            colaboradores.Sexo = cbCargo.SelectedItem.ToString();
+            colaboradores.Salario = Convert.ToDecimal(mtbSalario.Text);
+            colaboradores.Sexo = cbSexo.SelectedItem.ToString();
+            colaboradores.Cargo = cbCargo.SelectedItem.ToString();
+
+            SqlConnection conexao = new SqlConnection();
+            conexao.ConnectionString = @"";
+            conexao.Open();
+
+            SqlCommand comando = new SqlCommand();
+            comando.Connection = conexao;
+            comando.CommandText = @"INSERT INTO colaboradores(nome, cpf, salario, sexo, cargo,programador)VALUES(@NOME,@CPF,@SALARIO,@SEXO,@CARGO,@PROGRAMADOR)";
+            comando.Parameters.AddWithValue("@NOME",colaboradores.Nome);
+            comando.Parameters.AddWithValue("@CPF", colaboradores.Cpf);
+            comando.Parameters.AddWithValue("@SALARIO", colaboradores.Salario);
+            comando.Parameters.AddWithValue("@SEXO", colaboradores.Sexo);
+            comando.Parameters.AddWithValue("@CARGO", colaboradores.Cargo);
+
+            comando.ExecuteNonQuery();
+            MessageBox.Show("Registro salvo com sucesso");
+            //LimparCampos();
+            conexao.Close();
+            //AtualizarTabela();
+        }
+        private void LimparCampos()
+        {
+            lblId.Text = "0";
+            txtNome.Clear();
+            mtbCPF.Clear();
+            mtbSalario.Clear();
+            cbSexo.SelectedIndex = -1;
+            cbCargo.SelectedIndex = -1;
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)

@@ -35,13 +35,10 @@
             this.lblCPF = new System.Windows.Forms.Label();
             this.lblSalario = new System.Windows.Forms.Label();
             this.mtbCPF = new System.Windows.Forms.MaskedTextBox();
-            this.txtSalario = new System.Windows.Forms.TextBox();
             this.lblSexo = new System.Windows.Forms.Label();
             this.lblCargo = new System.Windows.Forms.Label();
             this.cbCargo = new System.Windows.Forms.ComboBox();
             this.lblProgramador = new System.Windows.Forms.Label();
-            this.rbtProgramadorTrue = new System.Windows.Forms.RadioButton();
-            this.rbtProgramadorFalse = new System.Windows.Forms.RadioButton();
             this.cbSexo = new System.Windows.Forms.ComboBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.ColumnCodigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -53,6 +50,8 @@
             this.ColumnProgramador = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnExcluir = new System.Windows.Forms.Button();
             this.btnSalvar = new System.Windows.Forms.Button();
+            this.ckbProgramador = new System.Windows.Forms.CheckBox();
+            this.mtbSalario = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -135,15 +134,6 @@
             this.mtbCPF.TabIndex = 7;
             this.mtbCPF.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.mtbCPF_MaskInputRejected);
             // 
-            // txtSalario
-            // 
-            this.txtSalario.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSalario.Location = new System.Drawing.Point(100, 217);
-            this.txtSalario.Margin = new System.Windows.Forms.Padding(4);
-            this.txtSalario.Name = "txtSalario";
-            this.txtSalario.Size = new System.Drawing.Size(179, 34);
-            this.txtSalario.TabIndex = 8;
-            // 
             // lblSexo
             // 
             this.lblSexo.AutoSize = true;
@@ -190,32 +180,6 @@
             this.lblProgramador.Size = new System.Drawing.Size(155, 29);
             this.lblProgramador.TabIndex = 14;
             this.lblProgramador.Text = "Programador";
-            // 
-            // rbtProgramadorTrue
-            // 
-            this.rbtProgramadorTrue.AutoSize = true;
-            this.rbtProgramadorTrue.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbtProgramadorTrue.Location = new System.Drawing.Point(176, 364);
-            this.rbtProgramadorTrue.Margin = new System.Windows.Forms.Padding(4);
-            this.rbtProgramadorTrue.Name = "rbtProgramadorTrue";
-            this.rbtProgramadorTrue.Size = new System.Drawing.Size(76, 33);
-            this.rbtProgramadorTrue.TabIndex = 15;
-            this.rbtProgramadorTrue.TabStop = true;
-            this.rbtProgramadorTrue.Text = "Sim";
-            this.rbtProgramadorTrue.UseVisualStyleBackColor = true;
-            // 
-            // rbtProgramadorFalse
-            // 
-            this.rbtProgramadorFalse.AutoSize = true;
-            this.rbtProgramadorFalse.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbtProgramadorFalse.Location = new System.Drawing.Point(256, 364);
-            this.rbtProgramadorFalse.Margin = new System.Windows.Forms.Padding(4);
-            this.rbtProgramadorFalse.Name = "rbtProgramadorFalse";
-            this.rbtProgramadorFalse.Size = new System.Drawing.Size(79, 33);
-            this.rbtProgramadorFalse.TabIndex = 16;
-            this.rbtProgramadorFalse.TabStop = true;
-            this.rbtProgramadorFalse.Text = "Não";
-            this.rbtProgramadorFalse.UseVisualStyleBackColor = true;
             // 
             // cbSexo
             // 
@@ -310,22 +274,40 @@
             this.btnSalvar.UseVisualStyleBackColor = true;
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
+            // ckbProgramador
+            // 
+            this.ckbProgramador.AutoSize = true;
+            this.ckbProgramador.Location = new System.Drawing.Point(176, 371);
+            this.ckbProgramador.Name = "ckbProgramador";
+            this.ckbProgramador.Size = new System.Drawing.Size(113, 21);
+            this.ckbProgramador.TabIndex = 21;
+            this.ckbProgramador.Text = "Programador";
+            this.ckbProgramador.UseVisualStyleBackColor = true;
+            // 
+            // mtbSalario
+            // 
+            this.mtbSalario.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mtbSalario.Location = new System.Drawing.Point(100, 220);
+            this.mtbSalario.Mask = "$9999.99";
+            this.mtbSalario.Name = "mtbSalario";
+            this.mtbSalario.Size = new System.Drawing.Size(179, 34);
+            this.mtbSalario.TabIndex = 22;
+            // 
             // ColaboradoresForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1116, 554);
+            this.Controls.Add(this.mtbSalario);
+            this.Controls.Add(this.ckbProgramador);
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.cbSexo);
-            this.Controls.Add(this.rbtProgramadorFalse);
-            this.Controls.Add(this.rbtProgramadorTrue);
             this.Controls.Add(this.lblProgramador);
             this.Controls.Add(this.cbCargo);
             this.Controls.Add(this.lblCargo);
             this.Controls.Add(this.lblSexo);
-            this.Controls.Add(this.txtSalario);
             this.Controls.Add(this.mtbCPF);
             this.Controls.Add(this.lblSalario);
             this.Controls.Add(this.lblCPF);
@@ -351,13 +333,10 @@
         private System.Windows.Forms.Label lblCPF;
         private System.Windows.Forms.Label lblSalario;
         private System.Windows.Forms.MaskedTextBox mtbCPF;
-        private System.Windows.Forms.TextBox txtSalario;
         private System.Windows.Forms.Label lblSexo;
         private System.Windows.Forms.Label lblCargo;
         private System.Windows.Forms.ComboBox cbCargo;
         private System.Windows.Forms.Label lblProgramador;
-        private System.Windows.Forms.RadioButton rbtProgramadorTrue;
-        private System.Windows.Forms.RadioButton rbtProgramadorFalse;
         private System.Windows.Forms.ComboBox cbSexo;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnCodigo;
@@ -369,5 +348,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnProgramador;
         private System.Windows.Forms.Button btnExcluir;
         private System.Windows.Forms.Button btnSalvar;
+        private System.Windows.Forms.CheckBox ckbProgramador;
+        private System.Windows.Forms.MaskedTextBox mtbSalario;
     }
 }
