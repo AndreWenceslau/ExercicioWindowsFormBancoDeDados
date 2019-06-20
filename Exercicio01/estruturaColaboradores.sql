@@ -5,4 +5,6 @@ salario DECIMAL(6,2),
 sexo VARCHAR(10),
 cargo VARCHAR(100),
 programador BIT,
+
 );
+SELECT*FROM colaboradores;

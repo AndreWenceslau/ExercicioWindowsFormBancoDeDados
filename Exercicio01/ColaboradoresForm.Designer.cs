@@ -40,7 +40,7 @@
             this.cbCargo = new System.Windows.Forms.ComboBox();
             this.lblProgramador = new System.Windows.Forms.Label();
             this.cbSexo = new System.Windows.Forms.ComboBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvColaboradores = new System.Windows.Forms.DataGridView();
             this.ColumnCodigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnNome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnCPF = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -52,7 +52,7 @@
             this.btnSalvar = new System.Windows.Forms.Button();
             this.ckbProgramador = new System.Windows.Forms.CheckBox();
             this.mtbSalario = new System.Windows.Forms.MaskedTextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvColaboradores)).BeginInit();
             this.SuspendLayout();
             // 
             // lblCodigo
@@ -94,7 +94,7 @@
             // 
             this.txtNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNome.Location = new System.Drawing.Point(100, 133);
-            this.txtNome.Margin = new System.Windows.Forms.Padding(4);
+            this.txtNome.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(179, 34);
             this.txtNome.TabIndex = 3;
@@ -125,9 +125,10 @@
             // 
             // mtbCPF
             // 
+            this.mtbCPF.Culture = new System.Globalization.CultureInfo("");
             this.mtbCPF.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mtbCPF.Location = new System.Drawing.Point(100, 175);
-            this.mtbCPF.Margin = new System.Windows.Forms.Padding(4);
+            this.mtbCPF.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.mtbCPF.Mask = "999.999.999-99";
             this.mtbCPF.Name = "mtbCPF";
             this.mtbCPF.Size = new System.Drawing.Size(179, 34);
@@ -165,7 +166,7 @@
             "Padeiro",
             "Motorista "});
             this.cbCargo.Location = new System.Drawing.Point(100, 302);
-            this.cbCargo.Margin = new System.Windows.Forms.Padding(4);
+            this.cbCargo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cbCargo.Name = "cbCargo";
             this.cbCargo.Size = new System.Drawing.Size(179, 37);
             this.cbCargo.TabIndex = 13;
@@ -189,16 +190,17 @@
             "Masculino",
             "Feminino"});
             this.cbSexo.Location = new System.Drawing.Point(100, 258);
+            this.cbSexo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbSexo.Name = "cbSexo";
             this.cbSexo.Size = new System.Drawing.Size(179, 37);
             this.cbSexo.TabIndex = 17;
             // 
-            // dataGridView1
+            // dgvColaboradores
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvColaboradores.AllowUserToAddRows = false;
+            this.dgvColaboradores.AllowUserToDeleteRows = false;
+            this.dgvColaboradores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvColaboradores.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColumnCodigo,
             this.ColumnNome,
             this.ColumnCPF,
@@ -206,12 +208,14 @@
             this.ColumnSexo,
             this.ColumnCargo,
             this.ColumnProgramador});
-            this.dataGridView1.Location = new System.Drawing.Point(363, 8);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(739, 534);
-            this.dataGridView1.TabIndex = 18;
+            this.dgvColaboradores.Location = new System.Drawing.Point(363, 7);
+            this.dgvColaboradores.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgvColaboradores.Name = "dgvColaboradores";
+            this.dgvColaboradores.ReadOnly = true;
+            this.dgvColaboradores.RowTemplate.Height = 24;
+            this.dgvColaboradores.Size = new System.Drawing.Size(723, 534);
+            this.dgvColaboradores.TabIndex = 18;
+            this.dgvColaboradores.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvColaboradores_CellDoubleClick);
             // 
             // ColumnCodigo
             // 
@@ -258,17 +262,20 @@
             // btnExcluir
             // 
             this.btnExcluir.Location = new System.Drawing.Point(176, 415);
+            this.btnExcluir.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnExcluir.Name = "btnExcluir";
-            this.btnExcluir.Size = new System.Drawing.Size(159, 72);
+            this.btnExcluir.Size = new System.Drawing.Size(159, 71);
             this.btnExcluir.TabIndex = 19;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // btnSalvar
             // 
             this.btnSalvar.Location = new System.Drawing.Point(9, 415);
+            this.btnSalvar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(159, 72);
+            this.btnSalvar.Size = new System.Drawing.Size(159, 71);
             this.btnSalvar.TabIndex = 20;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = true;
@@ -277,17 +284,19 @@
             // ckbProgramador
             // 
             this.ckbProgramador.AutoSize = true;
-            this.ckbProgramador.Location = new System.Drawing.Point(176, 371);
+            this.ckbProgramador.Location = new System.Drawing.Point(176, 370);
+            this.ckbProgramador.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ckbProgramador.Name = "ckbProgramador";
-            this.ckbProgramador.Size = new System.Drawing.Size(113, 21);
+            this.ckbProgramador.Size = new System.Drawing.Size(53, 21);
             this.ckbProgramador.TabIndex = 21;
-            this.ckbProgramador.Text = "Programador";
+            this.ckbProgramador.Text = "Sim";
             this.ckbProgramador.UseVisualStyleBackColor = true;
             // 
             // mtbSalario
             // 
             this.mtbSalario.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mtbSalario.Location = new System.Drawing.Point(100, 220);
+            this.mtbSalario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.mtbSalario.Mask = "$9999.99";
             this.mtbSalario.Name = "mtbSalario";
             this.mtbSalario.Size = new System.Drawing.Size(179, 34);
@@ -297,12 +306,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1116, 554);
+            this.ClientSize = new System.Drawing.Size(1109, 554);
             this.Controls.Add(this.mtbSalario);
             this.Controls.Add(this.ckbProgramador);
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.btnExcluir);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvColaboradores);
             this.Controls.Add(this.cbSexo);
             this.Controls.Add(this.lblProgramador);
             this.Controls.Add(this.cbCargo);
@@ -315,10 +324,11 @@
             this.Controls.Add(this.lblNome);
             this.Controls.Add(this.lblId);
             this.Controls.Add(this.lblCodigo);
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "ColaboradoresForm";
             this.Text = "ColaboradoresForm";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.ColaboradoresForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvColaboradores)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -338,7 +348,7 @@
         private System.Windows.Forms.ComboBox cbCargo;
         private System.Windows.Forms.Label lblProgramador;
         private System.Windows.Forms.ComboBox cbSexo;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvColaboradores;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnCodigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnNome;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnCPF;

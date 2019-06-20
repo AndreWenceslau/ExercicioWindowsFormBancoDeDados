@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Exercicio01
 {
-    class ColaboradoresClasse
+    class Colaborador
     {
         public int Id;
         public string Nome;
@@ -15,5 +15,6 @@ namespace Exercicio01
         public string Sexo;
         public string Cargo;
         public bool Programador;
+
     }
 }
