@@ -33,3 +33,4 @@ C:\Users\andre\Documents\GitHub\ExercicioWindowsFormBancoDeDados\Exercicio01\obj
 C:\Users\andre\Documents\GitHub\ExercicioWindowsFormBancoDeDados\Exercicio01\obj\Debug\Exercicio01.exe
 C:\Users\andre\Documents\GitHub\ExercicioWindowsFormBancoDeDados\Exercicio01\obj\Debug\Exercicio01.pdb
 T:\Documentos\GitHub\ExercicioWindowsFormBancoDeDados\Exercicio01\obj\Debug\Exercicio01.ColaboradoresForm.resources
+C:\Users\andre\Documents\GitHub\ExercicioWindowsFormBancoDeDados\Exercicio01\obj\Debug\Exercicio01.ClientesForm.resources

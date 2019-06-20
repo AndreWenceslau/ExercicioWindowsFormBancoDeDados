@@ -140,7 +140,16 @@ namespace Exercicio01
             colaborador.Salario = Convert.ToDecimal(mtbSalario.Text.Replace("R$", ""));
             colaborador.Sexo = Convert.ToString(cbSexo.Text);
             colaborador.Cargo = Convert.ToString(cbCargo.Text);
-           
+            if (ckbProgramador.Checked)
+            {
+                colaborador.Programador = true;
+            }
+            else
+            {
+                colaborador.Programador = false;
+            }
+            
+
 
 
 
@@ -195,7 +204,7 @@ namespace Exercicio01
             colaborador.Salario = Convert.ToDecimal(linha["salario"]);
             colaborador.Sexo = linha["sexo"].ToString();
             colaborador.Cargo = linha["cargo"].ToString();
-            colaborador.Programador = Convert.ToBoolean(linha["programador"])
+            colaborador.Programador = Convert.ToBoolean(linha["programador"]);
             
 
             lblId.Text = colaborador.Id.ToString();
@@ -204,7 +213,8 @@ namespace Exercicio01
             mtbSalario.Text = colaborador.Salario.ToString();
             cbSexo.SelectedItem = colaborador.Sexo.ToString();
             cbCargo.SelectedItem = colaborador.Cargo.ToString();
-            if(texto=="sim")
+            string verifica = dgvColaboradores.CurrentRow.Cells[6].Value.ToString();
+            if (verifica=="Sim")
             {
                 ckbProgramador.Checked = true;
             }
