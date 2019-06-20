@@ -16,5 +16,10 @@ namespace Exercicio01
         {
             InitializeComponent();
         }
+
+        private void lblTelefone_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

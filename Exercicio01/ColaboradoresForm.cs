@@ -140,15 +140,9 @@ namespace Exercicio01
             colaborador.Salario = Convert.ToDecimal(mtbSalario.Text.Replace("R$", ""));
             colaborador.Sexo = Convert.ToString(cbSexo.Text);
             colaborador.Cargo = Convert.ToString(cbCargo.Text);
-            if (texto =="Sim")
-            {
-                colaborador.Programador = true;
-            }
-            else
-            {
-                colaborador.Programador = false;
-            }
-            colaborador.Programador = Convert.ToBoolean(texto);
+           
+
+
 
             SqlConnection conexao = new SqlConnection();
             conexao.ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\andre\Documents\banco-de-dados.mdf;Integrated Security=True;Connect Timeout=30";
@@ -201,14 +195,7 @@ namespace Exercicio01
             colaborador.Salario = Convert.ToDecimal(linha["salario"]);
             colaborador.Sexo = linha["sexo"].ToString();
             colaborador.Cargo = linha["cargo"].ToString();
-            if(texto=="sim")
-            {
-                colaborador.Programador = true;
-            }
-            else
-            {
-                colaborador.Programador = false;
-            }
+            colaborador.Programador = Convert.ToBoolean(linha["programador"]);
             
 
             lblId.Text = colaborador.Id.ToString();
@@ -217,7 +204,14 @@ namespace Exercicio01
             mtbSalario.Text = colaborador.Salario.ToString();
             cbSexo.SelectedItem = colaborador.Sexo.ToString();
             cbCargo.SelectedItem = colaborador.Cargo.ToString();
-
+            if(texto=="sim")
+            {
+                ckbProgramador.Checked = true;
+            }
+            else
+            {
+                ckbProgramador.Checked = false;
+            }
             conexao.Close();
         }
 

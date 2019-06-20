@@ -89,6 +89,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ClientesForm.resx">
+      <DependentUpon>ClientesForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ColaboradoresForm.resx">
       <DependentUpon>ColaboradoresForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -121,6 +124,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="EstruturaClientes.sql" />
     <Content Include="estruturaColaboradores.sql" />
     <Content Include="estruturaPeixe.sql" />
   </ItemGroup>
