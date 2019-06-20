@@ -195,7 +195,7 @@ namespace Exercicio01
             colaborador.Salario = Convert.ToDecimal(linha["salario"]);
             colaborador.Sexo = linha["sexo"].ToString();
             colaborador.Cargo = linha["cargo"].ToString();
-            colaborador.Programador = Convert.ToBoolean(linha["programador"]);
+            colaborador.Programador = Convert.ToBoolean(linha["programador"])
             
 
             lblId.Text = colaborador.Id.ToString();
