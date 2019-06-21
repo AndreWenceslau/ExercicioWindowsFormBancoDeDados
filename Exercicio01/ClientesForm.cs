@@ -55,6 +55,29 @@ namespace Exercicio01
             SqlConnection conexao = new SqlConnection();
             conexao.ConnectionString = @""; //Colocar o Banco
             conexao.Open();
+            SqlCommand comando = new SqlCommand();
+            comando.Connection = conexao;
+            comando.CommandText = @"INSERT INTO clientes(nome,cpf,salario,telefone,estado,cidade,bairro,cep,logradouro,numero,complexo,nome_sujo,altura,peso) VALUES(@NOME,@CPF,@SALARIO,@TELEFONE,@ESTADO,@CIDADE,@BAIRRO,@CEP,@LOGRADOURO,@NUMERO,@COMPLEXO,@NOME_SUJO,@ALTURA,@PESO)";
+
+            comando.Parameters.AddWithValue("@NOME", cliente.Nome);
+            comando.Parameters.AddWithValue("@CPF", cliente.Cpf);
+            comando.Parameters.AddWithValue("@SALARIO", cliente.Salario);
+            comando.Parameters.AddWithValue("@TELEFONE", cliente.Telefone);
+            comando.Parameters.AddWithValue("@ESTADO", cliente.Estado);
+            comando.Parameters.AddWithValue("@CIDADE", cliente.Cidade);
+            comando.Parameters.AddWithValue("@BAIRRO", cliente.Bairro);
+            comando.Parameters.AddWithValue("@CEP", cliente.Cep);
+            comando.Parameters.AddWithValue("@LOGRADOURO", cliente.Logradouro);
+            comando.Parameters.AddWithValue("@NUMERO", cliente.Numero);
+            comando.Parameters.AddWithValue("@COMPLEXO", cliente.Complexo);
+            comando.Parameters.AddWithValue("@NOME_SUJO", cliente.Nome_sujo);
+            comando.Parameters.AddWithValue("@ALTURA", cliente.Altura);
+            comando.Parameters.AddWithValue("@PESO", cliente.Peso);
+            comando.ExecuteNonQuery();
+            MessageBox.Show("Salvo com sucesso");
+            //LimparCampos();
+            conexao.Close();
+            //AtualizaTabela();
 
         }
     }
