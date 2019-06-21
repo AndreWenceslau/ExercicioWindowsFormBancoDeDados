@@ -1,4 +1,6 @@
-﻿CREATE TABLE colaboradores(id INT PRIMARY KEY IDENTITY(1,1),
+﻿
+
+CREATE TABLE clientes(id INT PRIMARY KEY IDENTITY(1,1),
 nome VARCHAR(100),
 saldo DECIMAL(6,2),
 telefone VARCHAR(100),
@@ -13,4 +15,4 @@ nome_sujo BIT,
 altura DECIMAL(3,1),
 peso DECIMAL (4,2)
 );
-SELECT*FROM colaboradores;
+SELECT*FROM cliente;

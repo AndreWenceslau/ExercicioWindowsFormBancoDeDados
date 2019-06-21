@@ -45,7 +45,7 @@
             this.lblBairro = new System.Windows.Forms.Label();
             this.txtBairro = new System.Windows.Forms.TextBox();
             this.lblCep = new System.Windows.Forms.Label();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.mtbCep = new System.Windows.Forms.MaskedTextBox();
             this.lblLogradouro = new System.Windows.Forms.Label();
             this.txtLogradouro = new System.Windows.Forms.TextBox();
             this.lblNumero = new System.Windows.Forms.Label();
@@ -222,13 +222,13 @@
             this.lblCep.TabIndex = 16;
             this.lblCep.Text = "CEP";
             // 
-            // maskedTextBox1
+            // mtbCep
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(107, 235);
-            this.maskedTextBox1.Mask = "99999-999";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(73, 22);
-            this.maskedTextBox1.TabIndex = 17;
+            this.mtbCep.Location = new System.Drawing.Point(107, 235);
+            this.mtbCep.Mask = "99999-999";
+            this.mtbCep.Name = "mtbCep";
+            this.mtbCep.Size = new System.Drawing.Size(73, 22);
+            this.mtbCep.TabIndex = 17;
             // 
             // lblLogradouro
             // 
@@ -464,6 +464,7 @@
             this.btnApagar.TabIndex = 32;
             this.btnApagar.Text = "Apagar";
             this.btnApagar.UseVisualStyleBackColor = true;
+            this.btnApagar.Click += new System.EventHandler(this.btnApagar_Click);
             // 
             // ClientesForm
             // 
@@ -485,7 +486,7 @@
             this.Controls.Add(this.lblNumero);
             this.Controls.Add(this.txtLogradouro);
             this.Controls.Add(this.lblLogradouro);
-            this.Controls.Add(this.maskedTextBox1);
+            this.Controls.Add(this.mtbCep);
             this.Controls.Add(this.lblCep);
             this.Controls.Add(this.txtBairro);
             this.Controls.Add(this.lblBairro);
@@ -530,7 +531,7 @@
         private System.Windows.Forms.Label lblBairro;
         private System.Windows.Forms.TextBox txtBairro;
         private System.Windows.Forms.Label lblCep;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.MaskedTextBox mtbCep;
         private System.Windows.Forms.Label lblLogradouro;
         private System.Windows.Forms.TextBox txtLogradouro;
         private System.Windows.Forms.Label lblNumero;
