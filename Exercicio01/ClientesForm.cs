@@ -27,13 +27,14 @@ namespace Exercicio01
         {
             if(lblId.Text == "0")
             {
-                //Inserir();
+                Inserir();
             }
             else
             {
                 //Alterar();
             }
         }
+        string texto = "";
         private void Inserir()
         {
             Cliente cliente = new Cliente();
@@ -75,9 +76,72 @@ namespace Exercicio01
             comando.Parameters.AddWithValue("@PESO", cliente.Peso);
             comando.ExecuteNonQuery();
             MessageBox.Show("Salvo com sucesso");
-            //LimparCampos();
+            LimparCampos();
             conexao.Close();
-            //AtualizaTabela();
+            AtualizarTabela();
+        }
+        private void LimparCampos()
+        {
+            lblId.Text = "0";
+            txtNome.Clear();
+            mtbCpf.Clear();
+            mtbSalario.Clear();
+            mtbTelefone.Clear();
+            txtEstado.Clear();
+            txtCidade.Clear();
+            txtBairro.Clear();
+            mtbCep.Clear();
+            txtLogradouro.Clear();
+            txtNumero.Clear();
+            txtComplexo.Clear();
+            ckbNomeSujo.Checked = false;//Pode estar errado
+            txtAltura.Clear();
+            txtPeso.Clear();
+        }
+        private void AtualizarTabela()
+        {
+            SqlConnection conexao = new SqlConnection();
+            conexao.ConnectionString = @""; //Colocar o banco
+            conexao.Open();
+            SqlCommand comando = new SqlCommand();
+            comando.Connection = conexao;
+            comando.CommandText = @"SELECT id,nome,cpf,salario,telefone,estado,cidade,bairro,cep,logradouro,numero,complexo,nome_sujo,altura,peso FROM clientes";
+
+            DataTable tabela = new DataTable();
+            tabela.Load(comando.ExecuteReader());
+            dgvClientes.RowCount = 0;
+            for (int i = 0; i < tabela.Rows.Count; i++)
+            {
+                DataRow linha = tabela.Rows[i];
+                Cliente cliente = new Cliente();
+                cliente.Id = Convert.ToInt32(linha["id"]);
+                cliente.Nome = linha["nome"].ToString();
+                cliente.Cpf = linha["cpf"].ToString();
+                cliente.Salario = Convert.ToDecimal(linha["salario"]);
+                cliente.Telefone = linha["telefone"].ToString();
+                cliente.Estado = linha["estado"].ToString();
+                cliente.Cidade = linha["cidade"].ToString();
+                cliente.Bairro = linha["bairro"].ToString();
+                cliente.Cep = linha["cep"].ToString();
+                cliente.Logradouro = linha["logradouro"].ToString();
+                cliente.Numero = Convert.ToInt32(linha["numero"]);
+                cliente.Complexo = linha["complexo"].ToString();
+                if(cliente.Nome_sujo ==true)
+                {
+                    texto = "sim";
+                }
+                else
+                {
+                    texto = "não";
+                }
+                cliente.Altura = Convert.ToDecimal(linha["altura"]);
+                cliente.Peso = Convert.ToDecimal(linha["peso"]);
+                dgvClientes.Rows.Add(new string[] { cliente.Id.ToString(), cliente.Nome.ToString(), cliente.Cpf.ToString(), cliente.Salario.ToString(), cliente.Telefone.ToString(), cliente.Estado.ToString(), cliente.Cidade.ToString(), cliente.Bairro.ToString(), cliente.Cep.ToString(), cliente.Logradouro.ToString(), cliente.Numero.ToString(), cliente.Complexo.ToString(), texto, cliente.Altura.ToString(), cliente.Peso.ToString() });
+            }
+            
+        }
+        private void Alterar()
+        {
 
         }
     }

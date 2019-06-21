@@ -95,7 +95,6 @@ namespace Exercicio01
             cbCargo.SelectedIndex = -1;
         }
         private void AtualizarTabela()
-
         {
             SqlConnection conexao = new SqlConnection();
             conexao.ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\andre\Documents\banco-de-dados.mdf;Integrated Security=True;Connect Timeout=30";
@@ -148,11 +147,7 @@ namespace Exercicio01
             {
                 colaborador.Programador = false;
             }
-            
-
-
-
-
+          
             SqlConnection conexao = new SqlConnection();
             conexao.ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\andre\Documents\banco-de-dados.mdf;Integrated Security=True;Connect Timeout=30";
             conexao.Open();
