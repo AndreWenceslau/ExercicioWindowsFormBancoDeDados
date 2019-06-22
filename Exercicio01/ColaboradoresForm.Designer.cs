@@ -59,7 +59,7 @@
             // 
             this.lblCodigo.AutoSize = true;
             this.lblCodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCodigo.Location = new System.Drawing.Point(13, 92);
+            this.lblCodigo.Location = new System.Drawing.Point(13, 43);
             this.lblCodigo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCodigo.Name = "lblCodigo";
             this.lblCodigo.Size = new System.Drawing.Size(92, 29);
@@ -71,7 +71,7 @@
             // 
             this.lblId.AutoSize = true;
             this.lblId.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblId.Location = new System.Drawing.Point(113, 92);
+            this.lblId.Location = new System.Drawing.Point(113, 43);
             this.lblId.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblId.Name = "lblId";
             this.lblId.Size = new System.Drawing.Size(26, 29);
@@ -82,7 +82,7 @@
             // 
             this.lblNome.AutoSize = true;
             this.lblNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNome.Location = new System.Drawing.Point(13, 133);
+            this.lblNome.Location = new System.Drawing.Point(13, 87);
             this.lblNome.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNome.Name = "lblNome";
             this.lblNome.Size = new System.Drawing.Size(79, 29);
@@ -94,17 +94,18 @@
             // 
             this.txtNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNome.Location = new System.Drawing.Point(148, 87);
-            this.txtNome.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtNome.Margin = new System.Windows.Forms.Padding(5);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(179, 34);
             this.txtNome.TabIndex = 3;
             this.txtNome.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.txtNome.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtNome_KeyDown);
             // 
             // lblCPF
             // 
             this.lblCPF.AutoSize = true;
             this.lblCPF.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCPF.Location = new System.Drawing.Point(13, 175);
+            this.lblCPF.Location = new System.Drawing.Point(13, 143);
             this.lblCPF.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCPF.Name = "lblCPF";
             this.lblCPF.Size = new System.Drawing.Size(61, 29);
@@ -115,7 +116,7 @@
             // 
             this.lblSalario.AutoSize = true;
             this.lblSalario.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSalario.Location = new System.Drawing.Point(13, 220);
+            this.lblSalario.Location = new System.Drawing.Point(13, 199);
             this.lblSalario.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSalario.Name = "lblSalario";
             this.lblSalario.Size = new System.Drawing.Size(89, 29);
@@ -128,18 +129,19 @@
             this.mtbCPF.Culture = new System.Globalization.CultureInfo("");
             this.mtbCPF.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mtbCPF.Location = new System.Drawing.Point(148, 138);
-            this.mtbCPF.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.mtbCPF.Margin = new System.Windows.Forms.Padding(5);
             this.mtbCPF.Mask = "999.999.999-99";
             this.mtbCPF.Name = "mtbCPF";
             this.mtbCPF.Size = new System.Drawing.Size(179, 34);
             this.mtbCPF.TabIndex = 7;
             this.mtbCPF.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.mtbCPF_MaskInputRejected);
+            this.mtbCPF.KeyDown += new System.Windows.Forms.KeyEventHandler(this.mtbCPF_KeyDown);
             // 
             // lblSexo
             // 
             this.lblSexo.AutoSize = true;
             this.lblSexo.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSexo.Location = new System.Drawing.Point(13, 266);
+            this.lblSexo.Location = new System.Drawing.Point(13, 249);
             this.lblSexo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSexo.Name = "lblSexo";
             this.lblSexo.Size = new System.Drawing.Size(68, 29);
@@ -150,7 +152,7 @@
             // 
             this.lblCargo.AutoSize = true;
             this.lblCargo.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCargo.Location = new System.Drawing.Point(13, 310);
+            this.lblCargo.Location = new System.Drawing.Point(13, 303);
             this.lblCargo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCargo.Name = "lblCargo";
             this.lblCargo.Size = new System.Drawing.Size(79, 29);
@@ -166,16 +168,17 @@
             "Padeiro",
             "Motorista "});
             this.cbCargo.Location = new System.Drawing.Point(148, 295);
-            this.cbCargo.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.cbCargo.Margin = new System.Windows.Forms.Padding(5);
             this.cbCargo.Name = "cbCargo";
             this.cbCargo.Size = new System.Drawing.Size(179, 37);
             this.cbCargo.TabIndex = 13;
+            this.cbCargo.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cbCargo_KeyDown);
             // 
             // lblProgramador
             // 
             this.lblProgramador.AutoSize = true;
             this.lblProgramador.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProgramador.Location = new System.Drawing.Point(13, 364);
+            this.lblProgramador.Location = new System.Drawing.Point(13, 363);
             this.lblProgramador.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblProgramador.Name = "lblProgramador";
             this.lblProgramador.Size = new System.Drawing.Size(155, 29);
@@ -194,6 +197,7 @@
             this.cbSexo.Name = "cbSexo";
             this.cbSexo.Size = new System.Drawing.Size(179, 37);
             this.cbSexo.TabIndex = 17;
+            this.cbSexo.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cbSexo_KeyDown);
             // 
             // dgvColaboradores
             // 
@@ -291,6 +295,7 @@
             this.ckbProgramador.TabIndex = 21;
             this.ckbProgramador.Text = "Sim";
             this.ckbProgramador.UseVisualStyleBackColor = true;
+            this.ckbProgramador.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ckbProgramador_KeyDown);
             // 
             // mtbSalario
             // 
@@ -301,6 +306,7 @@
             this.mtbSalario.Name = "mtbSalario";
             this.mtbSalario.Size = new System.Drawing.Size(179, 34);
             this.mtbSalario.TabIndex = 22;
+            this.mtbSalario.KeyDown += new System.Windows.Forms.KeyEventHandler(this.mtbSalario_KeyDown);
             // 
             // ColaboradoresForm
             // 
@@ -324,7 +330,7 @@
             this.Controls.Add(this.lblNome);
             this.Controls.Add(this.lblId);
             this.Controls.Add(this.lblCodigo);
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "ColaboradoresForm";
             this.Text = "ColaboradoresForm";
             this.Load += new System.EventHandler(this.ColaboradoresForm_Load);

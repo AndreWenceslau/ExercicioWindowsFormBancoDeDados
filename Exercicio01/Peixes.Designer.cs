@@ -53,9 +53,10 @@
             // 
             this.lblCodigo.AutoSize = true;
             this.lblCodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCodigo.Location = new System.Drawing.Point(6, 21);
+            this.lblCodigo.Location = new System.Drawing.Point(8, 26);
+            this.lblCodigo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCodigo.Name = "lblCodigo";
-            this.lblCodigo.Size = new System.Drawing.Size(108, 31);
+            this.lblCodigo.Size = new System.Drawing.Size(135, 39);
             this.lblCodigo.TabIndex = 0;
             this.lblCodigo.Text = "Código:";
             // 
@@ -63,9 +64,10 @@
             // 
             this.lblId.AutoSize = true;
             this.lblId.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblId.Location = new System.Drawing.Point(120, 21);
+            this.lblId.Location = new System.Drawing.Point(160, 26);
+            this.lblId.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblId.Name = "lblId";
-            this.lblId.Size = new System.Drawing.Size(29, 31);
+            this.lblId.Size = new System.Drawing.Size(36, 39);
             this.lblId.TabIndex = 1;
             this.lblId.Text = "0";
             // 
@@ -73,9 +75,10 @@
             // 
             this.lblNome.AutoSize = true;
             this.lblNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNome.Location = new System.Drawing.Point(12, 115);
+            this.lblNome.Location = new System.Drawing.Point(16, 142);
+            this.lblNome.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNome.Name = "lblNome";
-            this.lblNome.Size = new System.Drawing.Size(86, 31);
+            this.lblNome.Size = new System.Drawing.Size(108, 39);
             this.lblNome.TabIndex = 2;
             this.lblNome.Text = "Nome";
             this.lblNome.Click += new System.EventHandler(this.lblNome_Click);
@@ -83,18 +86,21 @@
             // txtNome
             // 
             this.txtNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNome.Location = new System.Drawing.Point(18, 149);
+            this.txtNome.Location = new System.Drawing.Point(24, 183);
+            this.txtNome.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(217, 38);
+            this.txtNome.Size = new System.Drawing.Size(288, 46);
             this.txtNome.TabIndex = 3;
+            this.txtNome.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtNome_KeyDown);
             // 
             // lblRaca
             // 
             this.lblRaca.AutoSize = true;
             this.lblRaca.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRaca.Location = new System.Drawing.Point(12, 190);
+            this.lblRaca.Location = new System.Drawing.Point(16, 234);
+            this.lblRaca.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblRaca.Name = "lblRaca";
-            this.lblRaca.Size = new System.Drawing.Size(78, 31);
+            this.lblRaca.Size = new System.Drawing.Size(97, 39);
             this.lblRaca.TabIndex = 4;
             this.lblRaca.Text = "Raça";
             this.lblRaca.Click += new System.EventHandler(this.lblRaca_Click);
@@ -107,18 +113,21 @@
             "Peixe Palhaço",
             "Cascudo",
             "Peixe Boi"});
-            this.cbRaca.Location = new System.Drawing.Point(18, 227);
+            this.cbRaca.Location = new System.Drawing.Point(24, 279);
+            this.cbRaca.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cbRaca.Name = "cbRaca";
-            this.cbRaca.Size = new System.Drawing.Size(217, 39);
+            this.cbRaca.Size = new System.Drawing.Size(288, 47);
             this.cbRaca.TabIndex = 5;
+            this.cbRaca.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cbRaca_KeyDown_1);
             // 
             // lblPreco
             // 
             this.lblPreco.AutoSize = true;
             this.lblPreco.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPreco.Location = new System.Drawing.Point(12, 269);
+            this.lblPreco.Location = new System.Drawing.Point(16, 331);
+            this.lblPreco.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPreco.Name = "lblPreco";
-            this.lblPreco.Size = new System.Drawing.Size(85, 31);
+            this.lblPreco.Size = new System.Drawing.Size(106, 39);
             this.lblPreco.TabIndex = 6;
             this.lblPreco.Text = "Preço";
             this.lblPreco.Click += new System.EventHandler(this.lblPreco_Click);
@@ -126,35 +135,42 @@
             // mtbPreco
             // 
             this.mtbPreco.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mtbPreco.Location = new System.Drawing.Point(18, 303);
+            this.mtbPreco.Location = new System.Drawing.Point(24, 373);
+            this.mtbPreco.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.mtbPreco.Mask = "$9999.99";
             this.mtbPreco.Name = "mtbPreco";
-            this.mtbPreco.Size = new System.Drawing.Size(217, 38);
+            this.mtbPreco.Size = new System.Drawing.Size(288, 46);
             this.mtbPreco.TabIndex = 7;
+            this.mtbPreco.KeyDown += new System.Windows.Forms.KeyEventHandler(this.mtbPreco_KeyDown);
+            this.mtbPreco.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.mtbPreco_MouseDoubleClick);
             // 
             // lblQuantidade
             // 
             this.lblQuantidade.AutoSize = true;
             this.lblQuantidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblQuantidade.Location = new System.Drawing.Point(12, 344);
+            this.lblQuantidade.Location = new System.Drawing.Point(16, 423);
+            this.lblQuantidade.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblQuantidade.Name = "lblQuantidade";
-            this.lblQuantidade.Size = new System.Drawing.Size(154, 31);
+            this.lblQuantidade.Size = new System.Drawing.Size(193, 39);
             this.lblQuantidade.TabIndex = 8;
             this.lblQuantidade.Text = "Quantidade";
             // 
             // txtQuantidade
             // 
             this.txtQuantidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtQuantidade.Location = new System.Drawing.Point(18, 378);
+            this.txtQuantidade.Location = new System.Drawing.Point(24, 465);
+            this.txtQuantidade.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtQuantidade.Name = "txtQuantidade";
-            this.txtQuantidade.Size = new System.Drawing.Size(217, 38);
+            this.txtQuantidade.Size = new System.Drawing.Size(288, 46);
             this.txtQuantidade.TabIndex = 9;
+            this.txtQuantidade.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtQuantidade_KeyDown);
             // 
             // btnApagarPeixe
             // 
-            this.btnApagarPeixe.Location = new System.Drawing.Point(681, 21);
+            this.btnApagarPeixe.Location = new System.Drawing.Point(908, 26);
+            this.btnApagarPeixe.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnApagarPeixe.Name = "btnApagarPeixe";
-            this.btnApagarPeixe.Size = new System.Drawing.Size(107, 46);
+            this.btnApagarPeixe.Size = new System.Drawing.Size(143, 57);
             this.btnApagarPeixe.TabIndex = 11;
             this.btnApagarPeixe.Text = "Apagar";
             this.btnApagarPeixe.UseVisualStyleBackColor = true;
@@ -162,9 +178,10 @@
             // 
             // btnSalavarPeixe
             // 
-            this.btnSalavarPeixe.Location = new System.Drawing.Point(568, 21);
+            this.btnSalavarPeixe.Location = new System.Drawing.Point(757, 26);
+            this.btnSalavarPeixe.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSalavarPeixe.Name = "btnSalavarPeixe";
-            this.btnSalavarPeixe.Size = new System.Drawing.Size(107, 44);
+            this.btnSalavarPeixe.Size = new System.Drawing.Size(143, 54);
             this.btnSalavarPeixe.TabIndex = 12;
             this.btnSalavarPeixe.Text = "Salvar";
             this.btnSalavarPeixe.UseVisualStyleBackColor = true;
@@ -211,18 +228,19 @@
             this.ColumnRaca,
             this.ColumnPreco,
             this.ColumnQuantidade});
-            this.dgvPeixes.Location = new System.Drawing.Point(253, 73);
+            this.dgvPeixes.Location = new System.Drawing.Point(337, 90);
+            this.dgvPeixes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvPeixes.Name = "dgvPeixes";
             this.dgvPeixes.ReadOnly = true;
-            this.dgvPeixes.Size = new System.Drawing.Size(535, 341);
+            this.dgvPeixes.Size = new System.Drawing.Size(713, 420);
             this.dgvPeixes.TabIndex = 10;
             this.dgvPeixes.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPeixes_CellDoubleClick);
             // 
             // PeixesForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 515);
+            this.ClientSize = new System.Drawing.Size(1067, 634);
             this.Controls.Add(this.btnSalavarPeixe);
             this.Controls.Add(this.btnApagarPeixe);
             this.Controls.Add(this.dgvPeixes);
@@ -236,6 +254,7 @@
             this.Controls.Add(this.lblNome);
             this.Controls.Add(this.lblId);
             this.Controls.Add(this.lblCodigo);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "PeixesForm";
             this.Text = "Peixes";
             this.Activated += new System.EventHandler(this.PeixesForm_Activated);

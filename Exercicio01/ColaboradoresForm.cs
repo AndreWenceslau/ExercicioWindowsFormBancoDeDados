@@ -258,5 +258,53 @@ namespace Exercicio01
                 AtualizarTabela();
             }
         }
+
+        private void txtNome_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Enter)
+            {
+                mtbCPF.Focus();
+            }
+        }
+
+        private void mtbCPF_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Enter)
+            {
+                mtbSalario.Focus();
+            }
+        }
+
+        private void mtbSalario_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Enter)
+            {
+                cbSexo.Focus();
+            }
+        }
+
+        private void cbSexo_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Enter)
+            {
+                cbCargo.Focus();
+            }
+        }
+
+        private void cbCargo_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Enter)
+            {
+                ckbProgramador.Focus();
+            }
+        }
+
+        private void ckbProgramador_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Enter)
+            {
+                btnSalvar.Focus();
+            }
+        }
     }
 }

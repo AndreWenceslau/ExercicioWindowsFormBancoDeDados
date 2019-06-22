@@ -22,8 +22,7 @@ namespace Exercicio01
         {
 
         }
-
-        private void btnApagar_Click(object sender, EventArgs e)
+        private void btnSalvar_Click(object sender, EventArgs e)
         {
             if (lblId.Text == "0")
             {
@@ -54,7 +53,7 @@ namespace Exercicio01
             cliente.Peso = Convert.ToDecimal(txtPeso.Text);
 
             SqlConnection conexao = new SqlConnection();
-            conexao.ConnectionString = @""; //Colocar o Banco
+            conexao.ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\andre\Documents\banco-de-dados.mdf;Integrated Security=True;Connect Timeout=30"; //Colocar o Banco
             conexao.Open();
             SqlCommand comando = new SqlCommand();
             comando.Connection = conexao;
@@ -101,7 +100,7 @@ namespace Exercicio01
         private void AtualizarTabela()
         {
             SqlConnection conexao = new SqlConnection();
-            conexao.ConnectionString = @""; //Colocar o banco
+            conexao.ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\andre\Documents\banco-de-dados.mdf;Integrated Security=True;Connect Timeout=30"; //Colocar o banco
             conexao.Open();
             SqlCommand comando = new SqlCommand();
             comando.Connection = conexao;
@@ -126,6 +125,7 @@ namespace Exercicio01
                 cliente.Logradouro = linha["logradouro"].ToString();
                 cliente.Numero = Convert.ToInt32(linha["numero"]);
                 cliente.Complexo = linha["complexo"].ToString();
+                cliente.Nome_sujo = Convert.ToBoolean(linha["nome_sujo"]);
                 if (cliente.Nome_sujo == true)
                 {
                     texto = "sim";
@@ -155,7 +155,7 @@ namespace Exercicio01
             cliente.Cep = Convert.ToString(mtbCep.Text);
             cliente.Logradouro = Convert.ToString(txtLogradouro.Text);
             cliente.Numero = Convert.ToInt32(txtNumero.Text);
-            if(ckbNomeSujo.Checked)
+            if (ckbNomeSujo.Checked)
             {
                 cliente.Nome_sujo = true;
             }
@@ -168,7 +168,7 @@ namespace Exercicio01
             cliente.Peso = Convert.ToDecimal(txtPeso.Text);
 
             SqlConnection conexao = new SqlConnection();
-            conexao.ConnectionString = @""; // Colocar o Banco
+            conexao.ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\andre\Documents\banco-de-dados.mdf;Integrated Security=True;Connect Timeout=30"; // Colocar o Banco
             conexao.Open();
             SqlCommand comando = new SqlCommand();
             comando.Connection = conexao;
@@ -191,6 +191,102 @@ namespace Exercicio01
             comando.ExecuteNonQuery();
             LimparCampos();
             AtualizarTabela();
+        }
+
+        private void dgvClientes_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int id = Convert.ToInt32(dgvClientes.CurrentRow.Cells[0].Value);
+            SqlConnection conexao = new SqlConnection();
+            conexao.ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\andre\Documents\banco-de-dados.mdf;Integrated Security=True;Connect Timeout=30"; //Colocar Banco
+            conexao.Open();
+            SqlCommand comando = new SqlCommand();
+            comando.CommandText = @"SELECT id, nome, cpf, salario, telefone, estado, cidade, bairro, cep, logradouro, numero, complexo, nome_sujo, altura, peso FROM clientes";
+            comando.Parameters.AddWithValue("@ID", id);
+            comando.Connection = conexao;
+            DataTable tabela = new DataTable();
+            tabela.Load(comando.ExecuteReader());
+            DataRow linha = tabela.Rows[0];
+            Cliente cliente = new Cliente();
+            cliente.Id = Convert.ToInt32(linha["id"]);
+            cliente.Nome = linha["nome"].ToString();
+            cliente.Cpf = linha["cpf"].ToString();
+            cliente.Salario = Convert.ToDecimal(linha["salario"]);
+            cliente.Telefone = linha["telefone"].ToString();
+            cliente.Estado = linha["estado"].ToString();
+            cliente.Cidade = linha["cidade"].ToString();
+            cliente.Bairro = linha["bairro"].ToString();
+            cliente.Cep = linha["cep"].ToString();
+            cliente.Logradouro = linha["logradouro"].ToString();
+            cliente.Numero = Convert.ToInt32(linha["numero"]);
+            cliente.Complexo = linha["complexo"].ToString();
+            cliente.Nome_sujo = Convert.ToBoolean(linha["nome_sujo"]);
+            cliente.Altura = Convert.ToDecimal(linha["altura"]);
+            cliente.Peso = Convert.ToDecimal(linha["peso"]);
+
+            lblId.Text = cliente.Id.ToString();
+            txtNome.Text = cliente.Nome.ToString();
+            mtbCpf.Text = cliente.Cpf.ToString();
+            mtbSalario.Text = cliente.Salario.ToString();
+            mtbTelefone.Text = cliente.Telefone.ToString();
+            txtEstado.Text = cliente.Estado.ToString();
+            txtCidade.Text = cliente.Cidade.ToString();
+            txtBairro.Text = cliente.Bairro.ToString();
+            mtbCep.Text = cliente.Cep.ToString();
+            txtLogradouro.Text = cliente.Logradouro.ToString();
+            txtNumero.Text = cliente.Numero.ToString();
+            txtComplexo.Text = cliente.Complexo.ToString();
+           
+            if (texto == "sim")
+            {
+                ckbNomeSujo.Checked = true;
+            }
+            else
+            {
+                ckbNomeSujo.Checked = false;
+            }
+            txtAltura.Text = cliente.Altura.ToString();
+            txtPeso.Text = cliente.Peso.ToString();
+            conexao.Close();
+        }
+
+        private void ClientesForm_Load(object sender, EventArgs e)
+        {
+            AtualizarTabela();
+        }
+
+        private void btnApagar_Click(object sender, EventArgs e)
+        {
+            if (dgvClientes.CurrentRow.Index == -1)
+            {
+                MessageBox.Show("Cadastre um Cliente");
+                return;
+            }
+            DialogResult caixaDialogo = MessageBox.Show("Deseja Realmente apagar?", "AVISO", MessageBoxButtons.YesNo);
+            if (caixaDialogo == DialogResult.Yes)
+            {
+                SqlConnection conexao = new SqlConnection();
+                conexao.ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\andre\Documents\banco-de-dados.mdf;Integrated Security=True;Connect Timeout=30";//Colocar Banco
+                conexao.Open();
+
+                SqlCommand comando = new SqlCommand();
+                comando.Connection = conexao;
+                comando.CommandText = @"DELETE FROM clientes WHERE id =@ID";
+                LimparCampos();
+                int id = Convert.ToInt32(dgvClientes.CurrentRow.Cells[0].Value);
+                comando.Parameters.AddWithValue("@ID", id);
+                comando.ExecuteNonQuery();
+                conexao.Close();
+
+                AtualizarTabela();
+            }
+        }
+
+        private void txtNome_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                mtbCpf.Focus();
+            }
         }
     }
 }

@@ -38,6 +38,7 @@ namespace Exercicio01
             {
                 Alterar();
             }
+            
         }
         private void Inserir()
         {
@@ -48,7 +49,7 @@ namespace Exercicio01
             peixe.Quantidade = Convert.ToInt32(txtQuantidade.Text);
 
             SqlConnection conexao = new SqlConnection();
-            conexao.ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=T:\Documentos\Banco-de-Dados.mdf;Integrated Security=True;Connect Timeout=30";
+            conexao.ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\andre\Documents\banco-de-dados.mdf;Integrated Security=True;Connect Timeout=30";
             conexao.Open();
 
             SqlCommand comando = new SqlCommand();
@@ -76,7 +77,7 @@ namespace Exercicio01
         private void AtualizarTabela()
         {
             SqlConnection conexao = new SqlConnection();
-            conexao.ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=T:\Documentos\Banco-de-Dados.mdf;Integrated Security=True;Connect Timeout=30";
+            conexao.ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\andre\Documents\banco-de-dados.mdf;Integrated Security=True;Connect Timeout=30";
             conexao.Open();
 
             SqlCommand comando = new SqlCommand();
@@ -107,7 +108,7 @@ namespace Exercicio01
             peixe.Preco = Convert.ToDecimal(mtbPreco.Text.Replace("R$",""));
             peixe.Quantidade = Convert.ToInt32(txtQuantidade.Text);
             SqlConnection conexao = new SqlConnection();
-            conexao.ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=T:\Documentos\Banco-de-Dados.mdf;Integrated Security=True;Connect Timeout=30";
+            conexao.ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\andre\Documents\banco-de-dados.mdf;Integrated Security=True;Connect Timeout=30";
             conexao.Open();
 
             SqlCommand comando = new SqlCommand();
@@ -141,7 +142,7 @@ namespace Exercicio01
         {
             int id = Convert.ToInt32(dgvPeixes.CurrentRow.Cells[0].Value);
             SqlConnection conexao = new SqlConnection();
-            conexao.ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=T:\Documentos\Banco-de-Dados.mdf;Integrated Security=True;Connect Timeout=30";
+            conexao.ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\andre\Documents\banco-de-dados.mdf;Integrated Security=True;Connect Timeout=30";
             conexao.Open();
             SqlCommand comando = new SqlCommand();
             comando.CommandText = @"SELECT id, nome, raca, preco, quantidade FROM peixes WHERE id = @ID";
@@ -204,6 +205,48 @@ namespace Exercicio01
             
 
 
+        }
+
+        private void txtNome_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                cbRaca.Focus();
+            }
+        }
+
+        private void cbRaca_KeyDown(object sender, KeyEventArgs e)
+        {
+
+        }
+
+        private void txtQuantidade_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Enter)
+            {
+                btnSalavarPeixe.Focus();
+            }
+        }
+
+        private void mtbPreco_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+           
+        }
+
+        private void cbRaca_KeyDown_1(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Enter)
+            {
+                mtbPreco.Focus();
+            }
+        }
+
+        private void mtbPreco_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Enter)
+            {
+                txtQuantidade.Focus();
+            }
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿CREATE TABLE colaboradores(id INT PRIMARY KEY IDENTITY(1,1),
+﻿
+CREATE TABLE colaboradores(id INT PRIMARY KEY IDENTITY(1,1),
 nome VARCHAR(100),
 cpf VARCHAR(14),
 salario DECIMAL(6,2),
