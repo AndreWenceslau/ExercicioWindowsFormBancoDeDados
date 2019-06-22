@@ -130,6 +130,7 @@
             this.mtbCpf.Name = "mtbCpf";
             this.mtbCpf.Size = new System.Drawing.Size(100, 22);
             this.mtbCpf.TabIndex = 5;
+            this.mtbCpf.KeyDown += new System.Windows.Forms.KeyEventHandler(this.mtbCpf_KeyDown);
             // 
             // lblSalario
             // 
@@ -147,6 +148,7 @@
             this.mtbSalario.Name = "mtbSalario";
             this.mtbSalario.Size = new System.Drawing.Size(73, 22);
             this.mtbSalario.TabIndex = 7;
+            this.mtbSalario.KeyDown += new System.Windows.Forms.KeyEventHandler(this.mtbSalario_KeyDown);
             // 
             // lblTelefone
             // 
@@ -165,6 +167,7 @@
             this.mtbTelefone.Name = "mtbTelefone";
             this.mtbTelefone.Size = new System.Drawing.Size(100, 22);
             this.mtbTelefone.TabIndex = 9;
+            this.mtbTelefone.KeyDown += new System.Windows.Forms.KeyEventHandler(this.mtbTelefone_KeyDown);
             // 
             // lblEstado
             // 
@@ -181,6 +184,7 @@
             this.txtEstado.Name = "txtEstado";
             this.txtEstado.Size = new System.Drawing.Size(100, 22);
             this.txtEstado.TabIndex = 11;
+            this.txtEstado.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtEstado_KeyDown);
             // 
             // lblCidade
             // 
@@ -197,6 +201,7 @@
             this.txtCidade.Name = "txtCidade";
             this.txtCidade.Size = new System.Drawing.Size(100, 22);
             this.txtCidade.TabIndex = 13;
+            this.txtCidade.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtCidade_KeyDown);
             // 
             // lblBairro
             // 
@@ -213,6 +218,7 @@
             this.txtBairro.Name = "txtBairro";
             this.txtBairro.Size = new System.Drawing.Size(100, 22);
             this.txtBairro.TabIndex = 15;
+            this.txtBairro.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtBairro_KeyDown);
             // 
             // lblCep
             // 
@@ -230,6 +236,7 @@
             this.mtbCep.Name = "mtbCep";
             this.mtbCep.Size = new System.Drawing.Size(73, 22);
             this.mtbCep.TabIndex = 17;
+            this.mtbCep.KeyDown += new System.Windows.Forms.KeyEventHandler(this.mtbCep_KeyDown);
             // 
             // lblLogradouro
             // 
@@ -246,6 +253,7 @@
             this.txtLogradouro.Name = "txtLogradouro";
             this.txtLogradouro.Size = new System.Drawing.Size(100, 22);
             this.txtLogradouro.TabIndex = 19;
+            this.txtLogradouro.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtLogradouro_KeyDown);
             // 
             // lblNumero
             // 
@@ -262,6 +270,7 @@
             this.txtNumero.Name = "txtNumero";
             this.txtNumero.Size = new System.Drawing.Size(100, 22);
             this.txtNumero.TabIndex = 21;
+            this.txtNumero.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtNumero_KeyDown);
             // 
             // lblComplexo
             // 
@@ -278,6 +287,7 @@
             this.txtComplexo.Name = "txtComplexo";
             this.txtComplexo.Size = new System.Drawing.Size(100, 22);
             this.txtComplexo.TabIndex = 23;
+            this.txtComplexo.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtComplexo_KeyDown);
             // 
             // lblNomeSujo
             // 
@@ -313,6 +323,7 @@
             this.txtAltura.Name = "txtAltura";
             this.txtAltura.Size = new System.Drawing.Size(100, 22);
             this.txtAltura.TabIndex = 27;
+            this.txtAltura.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtAltura_KeyDown);
             // 
             // lblPeso
             // 
@@ -329,6 +340,7 @@
             this.txtPeso.Name = "txtPeso";
             this.txtPeso.Size = new System.Drawing.Size(100, 22);
             this.txtPeso.TabIndex = 29;
+            this.txtPeso.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPeso_KeyDown);
             // 
             // dgvClientes
             // 

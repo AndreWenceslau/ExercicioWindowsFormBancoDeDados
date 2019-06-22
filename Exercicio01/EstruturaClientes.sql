@@ -14,7 +14,7 @@ numero VARCHAR(100),
 complexo VARCHAR(100),
 complemento DECIMAL(3),
 nome_sujo BIT,
-altura DECIMAL(3,1),
+altura DECIMAL(4,2),
 peso DECIMAL (4,2)
 );
 SELECT*FROM cliente;

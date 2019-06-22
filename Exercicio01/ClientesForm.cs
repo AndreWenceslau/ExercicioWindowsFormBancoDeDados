@@ -40,7 +40,7 @@ namespace Exercicio01
             cliente.Nome = txtNome.Text;
             cliente.Cpf = mtbCpf.Text;
             cliente.Salario = Convert.ToDecimal(mtbSalario.Text.Replace("R$", ""));
-            cliente.Telefone = mtbSalario.Text;
+            cliente.Telefone = mtbTelefone.Text;
             cliente.Estado = txtEstado.Text;
             cliente.Cidade = txtCidade.Text;
             cliente.Bairro = txtBairro.Text;
@@ -286,6 +286,102 @@ namespace Exercicio01
             if (e.KeyCode == Keys.Enter)
             {
                 mtbCpf.Focus();
+            }
+        }
+
+        private void mtbCpf_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Enter)
+            {
+                mtbSalario.Focus();
+            }
+        }
+
+        private void mtbSalario_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Enter)
+            {
+                mtbTelefone.Focus();
+            }
+        }
+
+        private void mtbTelefone_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Enter)
+            {
+                txtEstado.Focus();
+            }
+        }
+
+        private void txtEstado_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtCidade.Focus();
+            }
+        }
+
+        private void txtCidade_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtBairro.Focus();
+            }
+        }
+
+        private void txtBairro_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                mtbCep.Focus();
+            }
+        }
+
+        private void mtbCep_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtLogradouro.Focus();
+            }
+        }
+
+        private void txtLogradouro_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtNumero.Focus();
+            }
+        }
+
+        private void txtNumero_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtComplexo.Focus();
+            }
+        }
+
+        private void txtComplexo_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtAltura.Focus();
+            }
+        }
+
+        private void txtAltura_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtPeso.Focus();
+            }
+        }
+
+        private void txtPeso_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnSalvar.Focus();
             }
         }
     }
